@@ -50,12 +50,12 @@ extra_css:
 nav:
   - Welcome: index.md
   - Documentation:
-      - Description: description.md
-      - Tools: tools.md
-      - Workflow: workflow.md
-      - Features: features.md
-      - Runbook: runbook.md
-      - Recovery: recovery.md
+      - "📝 Description": description.md
+      - "🛠️ Tools": tools.md
+      - "🔄 Workflow": workflow.md
+      - "✨ Features": features.md
+      - "📖 Runbook": runbook.md
+      - "❤️ Recovery": recovery.md
 
 
 
