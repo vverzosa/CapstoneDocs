@@ -48,8 +48,8 @@ extra_css:
   - css/extra.css
 
 nav:
-  - Home: index.md
-  - Project Docs:
+  - Welcome: index.md
+  - Documentation:
       - Description: description.md
       - Tools: tools.md
       - Workflow: workflow.md
