@@ -13,5 +13,5 @@
 /* Sidebar text hover effect (emoji + label) */
 .md-nav__link:hover,
 .md-nav__link:focus {
-  color: #005f3e !important;  /* Yellow (gold) */
+  color: #005f3e !important;
 }
