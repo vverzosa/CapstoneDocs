@@ -1,17 +1,21 @@
 /* Change navigation background color */
-.md-header, 
+.md-header,
 .md-tabs {
   background-color: #005f3e !important;
 }
 
-/* Optional: change nav link hover/focus color */
-.md-nav__link:hover, 
-.md-nav__link:focus {
-  color: #ffffff !important;
-}
-
-/* Sidebar text hover effect (emoji + label) */
+/* Sidebar link hover: text + icon turn yellow */
 .md-nav__link:hover,
 .md-nav__link:focus {
-  color: #005f3e !important;
+  color: #FFD700 !important;  /* Gold yellow */
+}
+
+/* Active (current page) stays yellow */
+.md-nav__link--active {
+  color: #FFD700 !important;
+}
+
+/* Smooth hover transition */
+.md-nav__link {
+  transition: color 0.3s ease;
 }

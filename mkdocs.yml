@@ -31,6 +31,17 @@ theme:
     - navigation.expand
     - navigation.top
 
+  # Icons for sidebar nav
+  icon:
+    repo: fontawesome/brands/github
+    nav:
+      Description: material/file-document
+      Tools: material/hammer-wrench
+      Workflow: material/sync
+      Features: material/star
+      Runbook: material/book-open-page-variant
+      Recovery: material/heart
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -50,12 +61,13 @@ extra_css:
 nav:
   - Welcome: index.md
   - Documentation:
-      - "📝 Description": description.md
-      - "🛠️ Tools": tools.md
-      - "🔄 Workflow": workflow.md
-      - "✨ Features": features.md
-      - "📖 Runbook": runbook.md
-      - "❤️ Recovery": recovery.md
+      - Description: description.md
+      - Tools: tools.md
+      - Workflow: workflow.md
+      - Features: features.md
+      - Runbook: runbook.md
+      - Recovery: recovery.md
+
 
 
 
