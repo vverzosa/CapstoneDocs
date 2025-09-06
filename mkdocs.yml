@@ -7,22 +7,18 @@ theme:
     text: Roboto
     code: Roboto Mono
   palette:
-    # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Dark mode
       primary: blue
       accent: green
-
-    # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Light mode
       primary: blue
       accent: green
-
   features:
     - navigation.instant
     - navigation.tabs
@@ -30,17 +26,6 @@ theme:
     - navigation.instant.progress
     - navigation.expand
     - navigation.top
-
-  # Icons for sidebar nav
-  icon:
-    repo: fontawesome/brands/github
-    nav:
-      Description: material/file-document
-      Tools: material/hammer-wrench
-      Workflow: material/sync
-      Features: material/star
-      Runbook: material/book-open-page-variant
-      Recovery: material/heart
 
 markdown_extensions:
   - attr_list
@@ -53,22 +38,27 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra_css:
   - css/extra.css
 
+plugins:
+  - search
+
 nav:
-  - Welcome: index.md
+  - "Welcome": index.md
   - Documentation:
-      - Description: description.md
-      - Tools: tools.md
-      - Workflow: workflow.md
-      - Features: features.md
-      - Runbook: runbook.md
-      - Recovery: recovery.md
-
-
+      - "📄 Description": description.md
+      - "🛠️ Tools": tools.md
+      - "🔄 Workflow": workflow.md
+      - "⭐ Features": features.md
+      - "📖 Runbook": runbook.md
+      - "❤️ Recovery": recovery.md
 
 
 # venv/Scripts/activate

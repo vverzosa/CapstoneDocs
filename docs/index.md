@@ -1,108 +1,30 @@
-# Welcome
+This document represents our team’s effort to design and implement a modern **Continuous Integration (CI)** and **Continuous Deployment (CD)** using industry-standard DevOps tools.
 
-This documentation provides a detailed overview of our **CI/CD Case Study** project.  
-The project demonstrates how to design, implement, and operate a CI/CD pipeline using **TeamCity**, **Jenkins**, and **Spinnaker**, with **GitHub** as the version control system and **Kubernetes** as the deployment platform.
+Our goal is to create a solution that does more than just build and deploy code — it must follow best practices for **automation, reliability, collaboration, and recovery**.  
 
-By following this documentation, you will gain an understanding of:
-- How CI/CD pipelines are built with modern tools.
-- How automated deployments work in Kubernetes.
-- How to handle failures with structured runbooks.
-- How to maintain reliability with disaster recovery planning.
+The technologies chosen are **TeamCity, Jenkins, Spinnaker, and Istio**, which reflect the tools used in real-world production environments across many organizations.
 
 ---
 
-## Web App Deployment
+## 🎯 Purpose of this Document
 
-### Requirements
-- Displays a plain colored background when accessed.
-- Must be accessible over the internet.
-- Source code (e.g., Flask or Java) should be buildable and compilable in **TeamCity**.
-
----
-
-## Kubernetes Deployment
-
-### Requirements
-- Canary deployment strategy must be used.
-- Each deployment must maintain **five (5) healthy replicas**.
+- To serve as a technical reference for panelists, advisers, and engineers reviewing our case study.  
+- Provide clarity on how code changes move from integration to development all the way to production.  
+- To act as a runbook and operations manual, showing how we plan to respond when failures happen.  
 
 ---
 
-## Jenkins – Image Build
+## 📌 Scope
 
-- Jenkins will be deployed to build Docker images.
-- Build is managed with a **Jenkinsfile**.
-- Docker image must be pushed to [Docker Hub](https://registry.hub.docker.com).
+This case study covers:
 
----
-
-## TeamCity – Continuous Integration (CI)
-
-- Deploy TeamCity to handle CI processes.
-- Integrate GitHub repository containing the app source code.
-- Automated unit tests must run with each build.
+- **Source code version control** using GitHub with strict branching discipline.  
+- **Build automation** using TeamCity for testing and Jenkins for Docker image creation.  
+- **Deployment automation** using Spinnaker with canary deployment enabled by Istio.  
+- **Operational readiness** through simulated incidents, troubleshooting, and recovery.  
 
 ---
 
-## Spinnaker – Continuous Deployment (CD)
+## 📖 Outcome
 
-- Spinnaker is responsible for deploying to Kubernetes.
-- Deployment triggers:
-  - After Jenkins job succeeds, or
-  - When a Docker image is successfully pushed.
-
----
-
-## Version Control
-
-- Git repository must have **two branches**:
-  - `main` → Production environment.
-  - `dev` → Development environment.
-- Branch protection requirements:
-  - PR approval required before merging.
-  - All status checks must pass (TeamCity build success).
-- GitHub repo must contain:
-  - Automation codebase
-  - Infrastructure configurations
-  - Documentation
-- Commit history must show only **merged PRs**.
-
----
-
-## Runbooks
-
-This section provides step-by-step procedures to handle failures.
-
-### CI/CD Failures
-- Breaking code changes (syntax or logical errors).
-- Breaking TeamCity or Spinnaker configs.
-- TeamCity build agent unavailability.
-
-### Version Control Failures
-- Merge conflicts between `main` and `dev`.
-- Steps to resolve and redeploy.
-
----
-
-## Disaster Recovery Plan
-
-- Backup and restore strategies for Kubernetes resources.
-- Rollback strategies for failed deployments.
-- Recovery steps for CI/CD platforms (Jenkins, TeamCity, Spinnaker).
-
----
-
-## Operations Simulation
-
-Failures introduced for testing resilience:
-
-- **CI/CD Failures**
-  - Broken code
-  - Broken configs
-  - Missing build agents
-- **Version Control Failures**
-  - Merge conflicts between branches
-
-Each scenario is tested and resolved through defined **runbooks**.
-
----
+By following this documentation, you’ll gain both a **technical roadmap** and an **operational playbook** for managing CI/CD.
