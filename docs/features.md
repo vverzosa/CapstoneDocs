@@ -1,7 +1,7 @@
 # Features
 
 ## 📦 Web App Deployment
-- Java-based web app containerized with Docker.  
+- Python-based web app containerized with Docker.  
 - Runs in Kubernetes with **five replicas** for reliability.  
 - Canary deployment strategy → traffic gradually shifted using Istio.  
 
