@@ -77,8 +77,8 @@ The figure below illustrates the end-to-end workflow of our CI/CD pipeline:
 - Merges trigger Jenkins to:
     - Build a Docker image.
     - Tag the image with:
-        - :buildNumber-hash (e.g., 42-a1b2c3d) → unique, traceable version.
-        - :latest → always points to the newest successful build.
+        - `:buildNumber-hash` (e.g., 42-a1b2c3d) → unique, traceable version.
+        - `:latest` → always points to the newest successful build.
     - Push both tags to Docker Hub.
 
 ### 5. Spinnaker Deployment
@@ -179,6 +179,6 @@ echo "❌ Build/push failed — check logs."
 
 - **Checkout** → Pulls latest source code from GitHub.
 - **Docker Login** → Uses Jenkins credentials for secure DockerHub authentication.
-- **Build Image** → Builds Docker image with dual tagging (:buildNumber-hash + :latest).
+- **Build Image** → Builds Docker image with dual tagging (`:buildNumber-hash` + `:latest`).
 - **Push Image** → Pushes both tags to DockerHub registry.
 - **Post Actions** → Ensures logout from DockerHub and logs build result.
